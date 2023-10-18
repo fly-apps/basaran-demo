@@ -1,0 +1,18 @@
+app = "basaran-demo"
+primary_region = "ord"
+
+[env]
+MODEL="tiiuae/falcon-rw-7b"
+MODEL_CACHE_DIR="/data"
+MODEL_TRUST_REMOTE_CODE=true
+
+[build]
+image = "hyperonym/basaran:0.19.0"
+
+[[mounts]]
+source = "data"
+destination = "/data"
+
+[http_service]
+internal_port = 80
+force_https = true
