@@ -3,11 +3,6 @@
 First deploy with:
 ```
 fly apps create basaran-demo
-fly deploy --vm-gpu-kind a100-pcie-40gb --volume-initial-size 100 --wait-timeout 600
-```
-
-From there for following deploys use:
-```
 fly deploy
 ```
 
